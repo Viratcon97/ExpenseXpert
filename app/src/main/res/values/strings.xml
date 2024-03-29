@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ExpenseXpert</string>
+    <string name="txt_home">Home</string>
+    <string name="txt_history">History</string>
+</resources>
