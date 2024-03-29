@@ -1,9 +1,12 @@
 package com.expensexpert.ui
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 import com.expensexpert.R
-import com.google.android.material.navigation.NavigationBarView
 import com.expensexpert.databinding.ActivityMainBinding
+import com.google.android.material.navigation.NavigationBarView
 
 
 class MainActivity : AppCompatActivity() {
@@ -15,18 +18,23 @@ class MainActivity : AppCompatActivity() {
 
         activityMainBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(activityMainBinding.root)
-        replaceFragment()
+        replaceFragment(HomeFragment())
 
         activityMainBinding.bottomNavigationView.setOnItemSelectedListener(NavigationBarView.OnItemSelectedListener { item ->
             val menuItemId = item.itemId
             if(menuItemId == R.id.home){
+
+            }else if(menuItemId == R.id.history){
 
             }
             true
         })
     }
 
-    private fun replaceFragment() {
-
+    private fun replaceFragment(fragment: Fragment) {
+        val fragmentManager: FragmentManager = supportFragmentManager
+        val transaction: FragmentTransaction = fragmentManager.beginTransaction()
+        transaction.replace(R.id.frameLayout, fragment)
+        transaction.commit()
     }
 }
