@@ -23,9 +23,9 @@ class MainActivity : AppCompatActivity() {
         activityMainBinding.bottomNavigationView.setOnItemSelectedListener(NavigationBarView.OnItemSelectedListener { item ->
             val menuItemId = item.itemId
             if(menuItemId == R.id.home){
-
+                replaceFragment(HomeFragment())
             }else if(menuItemId == R.id.history){
-
+                replaceFragment(HistoryFragment())
             }
             true
         })
