@@ -28,6 +28,7 @@ class HomeFragment : Fragment() {
         homeBinding = FragmentHomeBinding.inflate(layoutInflater)
         viewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
 
+
     }
 
 }
