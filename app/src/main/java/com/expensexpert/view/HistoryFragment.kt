@@ -1,4 +1,4 @@
-package com.expensexpert.ui
+package com.expensexpert.view
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -7,28 +7,27 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.expensexpert.R
-import com.expensexpert.databinding.FragmentHomeBinding
-import com.expensexpert.viewmodel.HomeViewModel
+import com.expensexpert.viewmodel.HistoryViewModel
 
-class HomeFragment : Fragment() {
+class HistoryFragment : Fragment() {
 
-    private lateinit var viewModel: HomeViewModel
+    companion object {
+        fun newInstance() = HistoryFragment()
+    }
 
-    private lateinit var homeBinding: FragmentHomeBinding
+    private lateinit var viewModel: HistoryViewModel
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        return inflater.inflate(R.layout.fragment_history, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        homeBinding = FragmentHomeBinding.inflate(layoutInflater)
-        viewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
-
+        viewModel = ViewModelProvider(this).get(HistoryViewModel::class.java)
+        // TODO: Use the ViewModel
 
     }
-
 }
