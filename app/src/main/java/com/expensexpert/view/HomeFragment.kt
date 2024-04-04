@@ -6,27 +6,27 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.expensexpert.R
+import android.widget.Toast
 import com.expensexpert.databinding.FragmentHomeBinding
-import com.expensexpert.viewmodel.HomeViewModel
+import com.expensexpert.viewmodel.AddExpenseViewModel
 
 class HomeFragment : Fragment() {
 
-    private lateinit var viewModel: HomeViewModel
+    private lateinit var viewModel: AddExpenseViewModel
 
     private lateinit var homeBinding: FragmentHomeBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        homeBinding = FragmentHomeBinding.inflate(layoutInflater)
+        return homeBinding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        homeBinding = FragmentHomeBinding.inflate(layoutInflater)
-        viewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(AddExpenseViewModel::class.java)
 
         homeBinding.button.setOnClickListener {
             val expenseTitle = homeBinding.editTextText.text.toString()
@@ -35,6 +35,14 @@ class HomeFragment : Fragment() {
 
             viewModel.saveExpenseDetails(expenseTitle,expenseDescription,expenseAmount)
 
+        }
+
+        viewModel.responseStatus.observe(viewLifecycleOwner){status ->
+            if(status){
+                Toast.makeText(requireActivity(),"Expense Successfully Added!",Toast.LENGTH_LONG).show()
+            }else{
+                Toast.makeText(requireActivity(),"Please try again!",Toast.LENGTH_LONG).show()
+            }
         }
     }
 

@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">ExpenseXpert</string>
-    <string name="txt_home">Home</string>
-    <string name="txt_history">History</string>
+    <string name="txtAddExpense">Add Expense</string>
+    <string name="txtExpenseHistory">Expense History</string>
     <string name="txtExpenseTitle">Expense title</string>
     <string name="txtExpenseDescription">Description</string>
     <string name="txtExpenseAmount">Amount (Before Tax)</string>

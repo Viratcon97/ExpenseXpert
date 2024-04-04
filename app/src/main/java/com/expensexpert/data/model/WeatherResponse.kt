@@ -1,4 +1,4 @@
-package com.expensexpert.data
+package com.expensexpert.data.model
 
 
 import com.google.gson.annotations.SerializedName

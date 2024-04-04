@@ -3,11 +3,11 @@
 
     <item
         android:id="@+id/home"
-        android:title="@string/txt_home"
+        android:title="@string/txtAddExpense"
         android:icon="@drawable/home_white_24"/>
 
     <item
         android:id="@+id/history"
-        android:title="@string/txt_history"
+        android:title="@string/txtExpenseHistory"
         android:icon="@drawable/history_white_24"/>
 </menu>

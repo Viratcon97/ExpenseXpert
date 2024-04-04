@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "187578911330",
+    "project_id": "expense-xpert-25f52",
+    "storage_bucket": "expense-xpert-25f52.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:187578911330:android:91c6220235667262a35f3b",
+        "android_client_info": {
+          "package_name": "com.expensexpert"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBlTWT7yEA3lGABpmIhSX4fs8TuuLNBIU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
