@@ -67,6 +67,8 @@ dependencies {
     implementation("com.google.firebase:firebase-analytics")
     implementation("com.google.firebase:firebase-firestore")
 
+    //Coroutines
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
 
     //Retrofit, GSON
     implementation("com.squareup.retrofit2:retrofit:2.9.0")

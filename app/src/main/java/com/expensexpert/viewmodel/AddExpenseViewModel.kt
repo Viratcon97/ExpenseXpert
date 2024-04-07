@@ -3,8 +3,11 @@ package com.expensexpert.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class AddExpenseViewModel : ViewModel() {
 
@@ -26,13 +29,16 @@ class AddExpenseViewModel : ViewModel() {
             "expenseAmount" to expenseAmount
         )
 
-        db.collection("expenses")
-            .add(expense)
-            .addOnSuccessListener {
-                _status.value = true
-            }
-            .addOnFailureListener {
-                _status.value = false
-            }
+        viewModelScope.launch(Dispatchers.IO){
+            db.collection("expenses")
+                .add(expense)
+                .addOnSuccessListener {
+                    _status.value = true
+                }
+                .addOnFailureListener {
+                    _status.value = false
+                }
+        }
+
     }
 }

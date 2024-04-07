@@ -9,6 +9,10 @@ import android.view.ViewGroup
 import android.widget.Toast
 import com.expensexpert.databinding.FragmentHomeBinding
 import com.expensexpert.viewmodel.AddExpenseViewModel
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.launch
 
 class HomeFragment : Fragment() {
 
@@ -33,6 +37,9 @@ class HomeFragment : Fragment() {
             val expenseDescription = homeBinding.editTextTextMultiLine.text.toString()
             val expenseAmount = homeBinding.editTextText2.text.toString()
 
+            CoroutineScope(Dispatchers.Main).launch {
+
+            }
             viewModel.saveExpenseDetails(expenseTitle,expenseDescription,expenseAmount)
 
         }
