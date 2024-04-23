@@ -3,25 +3,33 @@ package com.expensexpert.data
 import android.util.Log
 import com.expensexpert.data.model.Expense
 import com.google.firebase.Firebase
+import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.firestore
 
-object FirebaseGetExpenses {
+class FirebaseGetExpenses {
 
-    suspend fun readExpenseData() : Expense{
-        var list = Expense()
-        val db = Firebase.firestore
-        db.collection("expenses")
-            .get()
-            .addOnSuccessListener { result ->
-                for (expense in result.documents){
-                    //list  = expense.data.
+    companion object{
+        suspend fun readExpenseData() : MutableList<Expense>{
+            val list = mutableListOf<Expense>()
+            val db = Firebase.firestore
+            db.collection("expenses")
+                .get()
+                .addOnSuccessListener { result ->
+                    for (expense in result){
+                        val data = expense.toObject(Expense::class.java)
+                        list.add(data)
+                    }
+                    for (user in list) {
+                        Log.d("MyTag","expenseAmount: ${user.expenseAmount}, expenseTitle: ${user.expenseTitle}," +
+                                " expenseDescription: ${user.expenseDescription}")
+                    }
+
+                }
+                .addOnFailureListener {
+                    Log.d("MyTag",""+it)
                 }
 
-            }
-            .addOnFailureListener {
-                Log.d("TAG",""+it)
-            }
-        Log.d("TAG",""+list)
-        return list
+            return list
+        }
     }
 }

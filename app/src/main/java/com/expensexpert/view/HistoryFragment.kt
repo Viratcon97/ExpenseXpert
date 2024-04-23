@@ -7,7 +7,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.LifecycleCoroutineScope
 import androidx.lifecycle.Observer
+import androidx.lifecycle.lifecycleScope
 import com.expensexpert.databinding.FragmentHistoryBinding
 import com.expensexpert.viewmodel.HistoryViewModel
 import kotlinx.coroutines.CoroutineScope
@@ -35,9 +37,11 @@ class HistoryFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         viewModel = ViewModelProvider(this).get(HistoryViewModel::class.java)
 
+
         viewModel.getData()
 
         viewModel.expenseList.observe(requireActivity(), Observer {
+            Log.d("MyTag","Inside Fragment - $it")
             historyBinding.text.text = it.toString()
         })
 
