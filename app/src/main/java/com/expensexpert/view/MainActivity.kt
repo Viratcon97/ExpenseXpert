@@ -50,6 +50,8 @@ class MainActivity : AppCompatActivity() {
                  replaceFragment(HomeFragment())
              } else if (menuItemId == R.id.history) {
                  replaceFragment(HistoryFragment())
+             } else if (menuItemId == R.id.profile){
+                 replaceFragment(ProfileFragment())
              }
              true
          }

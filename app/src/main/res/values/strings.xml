@@ -6,4 +6,5 @@
     <string name="txtExpenseDescription">Description</string>
     <string name="txtExpenseAmount">Amount (Before Tax)</string>
     <string name="txtSubmit">Submit</string>
+    <string name="txtProfile">Profile</string>
 </resources>

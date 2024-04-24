@@ -32,6 +32,7 @@ class HistoryViewModel : ViewModel() {
                     for (expense in result){
                         val data = expense.toObject(Expense::class.java)
                         list.add(data)
+
                     }
                     for (user in list) {
                         Log.d("MyTag","expenseAmount: ${user.expenseAmount}, expenseTitle: ${user.expenseTitle}," +
