@@ -6,8 +6,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
 import android.widget.Toast
 import com.expensexpert.databinding.FragmentHomeBinding
+import com.expensexpert.utils.Constants
 import com.expensexpert.viewmodel.AddExpenseViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -19,10 +21,12 @@ class HomeFragment : Fragment() {
     private lateinit var viewModel: AddExpenseViewModel
 
     private lateinit var homeBinding: FragmentHomeBinding
+
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         homeBinding = FragmentHomeBinding.inflate(layoutInflater)
         return homeBinding.root
     }
@@ -32,13 +36,16 @@ class HomeFragment : Fragment() {
 
         viewModel = ViewModelProvider(this).get(AddExpenseViewModel::class.java)
 
+        val adapter = ArrayAdapter(requireActivity(), android.R.layout.simple_list_item_1, Constants.dropdownList)
+
+        homeBinding.dropdownTax.adapter = adapter
+
         homeBinding.button.setOnClickListener {
             val expenseTitle = homeBinding.editTextText.text.toString()
             val expenseDescription = homeBinding.editTextTextMultiLine.text.toString()
             val expenseAmount = homeBinding.editTextText2.text.toString()
 
             CoroutineScope(Dispatchers.Main).launch {
-
             }
             viewModel.saveExpenseDetails(expenseTitle,expenseDescription,expenseAmount)
 

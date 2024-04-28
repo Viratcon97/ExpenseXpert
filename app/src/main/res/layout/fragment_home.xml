@@ -23,9 +23,10 @@
             android:textColorHint="@color/hintColor"
             android:textSize="@dimen/_16sp"
             app:layout_constraintBottom_toTopOf="@+id/editTextTextMultiLine"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="VisualLintTextFieldSize"
-            tools:layout_editor_absoluteX="15dp" />
+            tools:ignore="VisualLintTextFieldSize" />
 
         <EditText
             android:id="@+id/editTextTextMultiLine"
@@ -39,9 +40,9 @@
             android:minLines="3"
             android:textColorHint="@color/hintColor"
             android:textSize="@dimen/_16sp"
-            app:layout_constraintBottom_toTopOf="@+id/editTextText2"
-            app:layout_constraintEnd_toEndOf="@+id/editTextText"
-            app:layout_constraintStart_toStartOf="@+id/editTextText"
+            app:layout_constraintBottom_toTopOf="@+id/dropdownTax"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextText"
             tools:ignore="VisualLintTextFieldSize" />
 
@@ -56,30 +57,31 @@
             android:minHeight="48dp"
             android:textColorHint="@color/hintColor"
             android:textSize="@dimen/_16sp"
-            app:layout_constraintBottom_toTopOf="@+id/spinner3"
-            app:layout_constraintEnd_toEndOf="@+id/editTextTextMultiLine"
-            app:layout_constraintStart_toStartOf="@+id/editTextTextMultiLine"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine"
+            app:layout_constraintBottom_toTopOf="@+id/button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dropdownTax"
             tools:ignore="VisualLintTextFieldSize" />
 
         <Spinner
-            android:id="@+id/spinner3"
+            android:id="@+id/dropdownTax"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toTopOf="@+id/button"
-            app:layout_constraintEnd_toEndOf="@+id/editTextText2"
-            app:layout_constraintStart_toStartOf="@+id/editTextText2"
-            app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
+            android:minHeight="48dp"
+            app:layout_constraintBottom_toTopOf="@+id/editTextText2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine" />
 
         <Button
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/txtSubmit"
-            app:layout_constraintBottom_toTopOf="@+id/editTextTextMultiLine"
-            app:layout_constraintEnd_toEndOf="@+id/spinner3"
-            app:layout_constraintStart_toStartOf="@+id/spinner3"
-            app:layout_constraintTop_toBottomOf="@+id/spinner3" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
