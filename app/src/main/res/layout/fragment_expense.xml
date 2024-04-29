@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.HomeFragment">
+    tools:context=".view.ExpenseFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -23,10 +23,9 @@
             android:textColorHint="@color/hintColor"
             android:textSize="@dimen/_16sp"
             app:layout_constraintBottom_toTopOf="@+id/editTextTextMultiLine"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="VisualLintTextFieldSize" />
+            tools:ignore="VisualLintTextFieldSize"
+            tools:layout_editor_absoluteX="17dp" />
 
         <EditText
             android:id="@+id/editTextTextMultiLine"
@@ -41,8 +40,9 @@
             android:textColorHint="@color/hintColor"
             android:textSize="@dimen/_16sp"
             app:layout_constraintBottom_toTopOf="@+id/dropdownTax"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/editTextText"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/editTextText"
             app:layout_constraintTop_toBottomOf="@+id/editTextText"
             tools:ignore="VisualLintTextFieldSize" />
 
@@ -57,9 +57,10 @@
             android:minHeight="48dp"
             android:textColorHint="@color/hintColor"
             android:textSize="@dimen/_16sp"
-            app:layout_constraintBottom_toTopOf="@+id/button"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/textView4"
+            app:layout_constraintEnd_toEndOf="@+id/dropdownTax"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/dropdownTax"
             app:layout_constraintTop_toBottomOf="@+id/dropdownTax"
             tools:ignore="VisualLintTextFieldSize" />
 
@@ -69,9 +70,21 @@
             android:layout_height="wrap_content"
             android:minHeight="48dp"
             app:layout_constraintBottom_toTopOf="@+id/editTextText2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/editTextTextMultiLine"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextMultiLine"
             app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/txtAmountAfterTax"
+            app:layout_constraintBottom_toTopOf="@+id/button"
+            app:layout_constraintEnd_toEndOf="@+id/editTextText2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/editTextText2"
+            app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
 
         <Button
             android:id="@+id/button"
@@ -79,9 +92,10 @@
             android:layout_height="wrap_content"
             android:text="@string/txtSubmit"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
+            app:layout_constraintEnd_toEndOf="@+id/textView4"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

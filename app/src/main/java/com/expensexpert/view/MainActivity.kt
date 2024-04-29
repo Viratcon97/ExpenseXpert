@@ -12,7 +12,6 @@ import com.expensexpert.data.Injector
 import com.expensexpert.databinding.ActivityMainBinding
 import com.expensexpert.viewmodel.WeatherViewModel
 import com.expensexpert.viewmodel.WeatherViewModelFactory
-import com.google.android.material.navigation.NavigationBarView
 import javax.inject.Inject
 
 
@@ -42,12 +41,12 @@ class MainActivity : AppCompatActivity() {
         data.observe(this, Observer {
             Log.d("Results", it.toString())
         })
-         replaceFragment(HomeFragment())
+         replaceFragment(ExpenseFragment())
 
          activityMainBinding.bottomNavigationView.setOnItemSelectedListener { item ->
              val menuItemId = item.itemId
              if (menuItemId == R.id.home) {
-                 replaceFragment(HomeFragment())
+                 replaceFragment(ExpenseFragment())
              } else if (menuItemId == R.id.history) {
                  replaceFragment(HistoryFragment())
              } else if (menuItemId == R.id.profile){

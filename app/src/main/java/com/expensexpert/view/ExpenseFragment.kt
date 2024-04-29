@@ -13,10 +13,9 @@ import com.expensexpert.utils.Constants
 import com.expensexpert.viewmodel.AddExpenseViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.launch
 
-class HomeFragment : Fragment() {
+class ExpenseFragment : Fragment() {
 
     private lateinit var viewModel: AddExpenseViewModel
 

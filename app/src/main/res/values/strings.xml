@@ -7,4 +7,5 @@
     <string name="txtExpenseAmount">Amount (Before Tax)</string>
     <string name="txtSubmit">Submit</string>
     <string name="txtProfile">Profile</string>
+    <string name="txtAmountAfterTax">Total Amount Including Taxes</string>
 </resources>
