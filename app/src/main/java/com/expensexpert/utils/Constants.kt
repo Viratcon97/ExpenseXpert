@@ -1,10 +1,12 @@
 package com.expensexpert.utils
 
+import com.expensexpert.data.model.TaxCal
+
 class Constants {
 
     companion object{
-        val dropdownList : ArrayList<String> = arrayListOf("Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut",
-            "Delaware","Florida","Georgia","Hawaii","Idaho","Illinois","Indiana","Iowa","Kansas",
-            "Texas","Washington")
+        val dropdownList : ArrayList<TaxCal> = arrayListOf(
+            TaxCal("Florida (15%)", 15), TaxCal("Texas (13%)", 13),
+            TaxCal("Washington (12%)",12))
     }
 }
