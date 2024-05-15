@@ -71,7 +71,9 @@ class ExpenseFragment : Fragment() {
     }
 
     private fun calculateTax(expense: String) {
-
+        val tax = (expense.toDouble() * 13)/100
+        val expenseAfterTax = expense.toDouble() + tax
+        expenseBinding.textView4.text = expenseAfterTax.toString()
     }
 
 }
