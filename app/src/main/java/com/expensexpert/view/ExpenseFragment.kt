@@ -8,6 +8,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
+import android.widget.AdapterView.OnItemSelectedListener
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import com.expensexpert.databinding.FragmentExpenseBinding
@@ -37,7 +39,10 @@ class ExpenseFragment : Fragment() {
 
         val adapter = ArrayAdapter(requireActivity(), android.R.layout.simple_list_item_1, Constants.dropdownList)
 
+
         expenseBinding.dropdownTax.adapter = adapter
+
+
 
         expenseBinding.editTextText2.addTextChangedListener(object : TextWatcher{
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
