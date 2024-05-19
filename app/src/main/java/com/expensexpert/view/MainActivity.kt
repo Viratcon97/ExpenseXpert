@@ -51,6 +51,8 @@ class MainActivity : AppCompatActivity() {
                  replaceFragment(HistoryFragment())
              } else if (menuItemId == R.id.profile){
                  replaceFragment(ProfileFragment())
+             } else if (menuItemId == R.id.savingsCal){
+                 replaceFragment(SavingsCalculationFragment())
              }
              true
          }

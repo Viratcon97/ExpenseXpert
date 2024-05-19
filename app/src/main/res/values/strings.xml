@@ -8,4 +8,7 @@
     <string name="txtSubmit">Submit</string>
     <string name="txtProfile">Profile</string>
     <string name="txtAmountAfterTax">Total Amount Including Taxes</string>
+    <string name="txtSavingsCal">Savings Calculation</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
