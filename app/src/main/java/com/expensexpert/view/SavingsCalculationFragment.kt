@@ -22,4 +22,20 @@ class SavingsCalculationFragment : Fragment() {
         savingsCalculationBinding = FragmentSavingsCalculationBinding.inflate(layoutInflater)
         return savingsCalculationBinding.root
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        savingsCalculationBinding.btnCalculate.setOnClickListener {
+            val inHandSalary = savingsCalculationBinding.etInHandSalary.text.toString()
+            val percentageSavings = savingsCalculationBinding.etSavingsPercentage.text.toString()
+
+            val calculateMonthlySavingsAmount = (inHandSalary.toDouble() * percentageSavings.toDouble())/100
+
+            val totalAnnualSavings = calculateMonthlySavingsAmount * 12
+
+            savingsCalculationBinding.txtMonthlySavings.text = calculateMonthlySavingsAmount.toString()
+            savingsCalculationBinding.txtAnnualSavings.text = totalAnnualSavings.toString()
+        }
+    }
 }
