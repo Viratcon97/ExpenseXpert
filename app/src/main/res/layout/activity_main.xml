@@ -26,13 +26,17 @@
         android:layout_height="match_parent"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottomNavigationView"
+        <github.com.st235.lib_expandablebottombar.ExpandableBottomBar
+            android:id="@+id/expandable_bottom_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            app:itemTextColor="@color/white"
-            app:menu="@menu/bottom_navigation_view"/>
+            app:layout_behavior="github.com.st235.lib_expandablebottombar.behavior.ExpandableBottomBarScrollableBehavior"
+            app:exb_items="@menu/bottom_navigation_view"
+            android:layout_margin="20dp"
+            app:exb_backgroundCornerRadius="25dp"
+            app:exb_backgroundColor="#FFc774"
+            app:exb_itemInactiveColor="#fff" />
     </FrameLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

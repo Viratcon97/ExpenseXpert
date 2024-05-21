@@ -1,23 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
         android:id="@+id/home"
         android:title="@string/txtAddExpense"
-        android:icon="@drawable/home_white_24"/>
+        android:icon="@drawable/home_white_24"
+        app:exb_color="#FF8888" />
 
     <item
         android:id="@+id/history"
         android:title="@string/txtExpenseHistory"
-        android:icon="@drawable/history_white_24"/>
+        android:icon="@drawable/history_white_24"
+        app:exb_color="#FF8888" />
 
     <item
         android:id="@+id/profile"
         android:title="@string/txtProfile"
-        android:icon="@drawable/history_white_24"/>
+        android:icon="@drawable/history_white_24"
+        app:exb_color="#FF8888" />
 
     <item
         android:id="@+id/savingsCal"
         android:title="@string/txtSavingsCal"
-        android:icon="@drawable/calculate_white_24"/>
+        android:icon="@drawable/calculate_white_24"
+        app:exb_color="#FF8888" />
 </menu>

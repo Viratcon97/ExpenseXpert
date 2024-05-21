@@ -8,7 +8,7 @@ plugins {
 
 android {
     namespace = "com.expensexpert"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.expensexpert"
@@ -62,6 +62,8 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
+
+
     //Firebase
     implementation(platform("com.google.firebase:firebase-bom:32.8.0"))
     implementation("com.google.firebase:firebase-analytics")
@@ -82,4 +84,7 @@ dependencies {
     //Dagger
     implementation ("com.google.dagger:dagger:2.51.1")
     kapt("com.google.dagger:dagger-compiler:2.51.1")
+
+    //Expandable Bottom Bar
+    implementation("com.github.st235:expandablebottombar:1.5.4")
 }
