@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         activityMainBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(activityMainBinding.root)
 
-        activityMainBinding.toolbar.title = getString(R.string.app_name)
+        //activityMainBinding.toolbar.title = getString(R.string.app_name)
         (application as Injector).createWeatherSubComponent()
             .inject(this)
 

@@ -4,8 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background"
     tools:context=".view.MainActivity">
 
+<!--
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -19,6 +21,7 @@
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme" />
     </com.google.android.material.appbar.AppBarLayout>
+-->
 
     <FrameLayout
         android:id="@+id/frameLayout"
@@ -35,8 +38,8 @@
             app:exb_items="@menu/bottom_navigation_view"
             android:layout_margin="20dp"
             app:exb_backgroundCornerRadius="25dp"
-            app:exb_backgroundColor="#FFc774"
-            app:exb_itemInactiveColor="#fff" />
+            app:exb_backgroundColor="#fff"
+            app:exb_itemInactiveColor="#FFc774" />
     </FrameLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
