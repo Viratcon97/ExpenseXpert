@@ -2,8 +2,14 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.ExpenseXpert" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
     </style>
 
     <style name="Theme.ExpenseXpert" parent="Base.Theme.ExpenseXpert" />
+
+    <color name="colorPrimary">#F44336</color>
+    <color name="colorPrimaryDark">#01579B</color>
+    <color name="colorAccent">#333333</color>
 </resources>
