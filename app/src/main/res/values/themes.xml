@@ -10,6 +10,6 @@
     <style name="Theme.ExpenseXpert" parent="Base.Theme.ExpenseXpert" />
 
     <color name="colorPrimary">#F44336</color>
-    <color name="colorPrimaryDark">#01579B</color>
-    <color name="colorAccent">#333333</color>
+    <color name="colorPrimaryDark">#333333</color>
+    <color name="colorAccent">#fff</color>
 </resources>
