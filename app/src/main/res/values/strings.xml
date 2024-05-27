@@ -14,4 +14,6 @@
     <string name="txt_in_hand_salary">In-hand Salary (e.g. 50000)</string>
     <string name="txt_savings_percentage">Savings Percentage (e.g. 20)</string>
     <string name="txt_calculate">Calculate</string>
+    <string name="txt_biweekly">Bi-Weekly</string>
+    <string name="txt_monthly">Monthly</string>
 </resources>
